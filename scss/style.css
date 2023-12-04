@@ -339,9 +339,7 @@ header nav li {
   padding: 30px 45px;
 }
 .system .item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  object-fit: scale-down;
 }
 .system .item h2 {
   font-size: 36px;

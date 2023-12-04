@@ -361,9 +361,7 @@ header {
         gap: 30px;
         padding: 30px 45px;
         img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            object-fit: scale-down;
         }
         h2 {
             font-size: 36px;
