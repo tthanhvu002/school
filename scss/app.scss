@@ -1,0 +1,215 @@
+@font-face {
+    font-family: "OpenSans";
+    src:
+        url("../Font/OpenSans-Medium.ttf") format("truetype"),
+        url("../Font/OpenSans-BoldItalic.ttf"),
+        url("../Font/OpenSans-ExtraBold.ttf"),
+        url("../Font/OpenSans-ExtraBoldItalic.ttf"),
+        url("../Font/OpenSans-Italic.ttf"),
+        url("../Font/OpenSans-Light.ttf"),
+        url("../Font/OpenSans-LightItalic.ttf"),
+        url("../Font/OpenSans-Bold.ttf"),
+        url("../Font/OpenSans-MediumItalic.ttf"),
+        url("../Font/OpenSans-Regular.ttf"),
+        url("../Font/OpenSans-SemiBold.ttf"),
+        url("../Font/OpenSans-SemiBoldItalic.ttf");
+}
+* {
+    font-family: "OpenSans", sans-serif;
+    font-weight: 400;
+}
+ul,
+li,
+p,
+h1,
+h2,
+p,
+a {
+    text-decoration: none !important;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    padding: 0 12.5%;
+    max-width: unset !important;
+}
+.contact {
+    padding: 10px;
+    color: #fff;
+    font-size: 18px;
+    background-color: #252525;
+    .container {
+        gap: 20px;
+    }
+    .phone-number {
+        gap: 3px;
+    }
+    .signup-btn {
+        background-color: #005d83;
+        color: #fff;
+        padding: 5px 20px;
+        cursor: pointer;
+        border-radius: 90px;
+        font-size: 18px;
+    }
+}
+
+header {
+    background-color: #fff;
+    padding: 25px 0;
+    .container {
+    }
+    nav {
+        ul {
+            gap: 40px;
+        }
+        li {
+            font-size: 22px;
+            line-height: 27px;
+            color: #005d83;
+        }
+    }
+}
+
+.banner {
+    img {
+        max-width: 1920px;
+        object-fit: cover;
+        width: 100%;
+        height: 680px;
+    }
+}
+
+.intro {
+    display: flex;
+    .left {
+        padding: 90px 0;
+        padding-left: 12.5vw;
+        padding-right: 100px;
+        width: 62.5%;
+        background-color: #c1d739;
+        p {
+            font-size: 36px;
+            line-height: 46px;
+            color: #ffffff;
+        }
+        .text {
+            font-size: 30px;
+            line-height: 42px;
+            color: #4e4e4e;
+            font-weight: 400;
+        }
+    }
+    .right {
+        video {
+            height: 100%;
+            width: 100%;
+        }
+        width: calc(100% - 62.5%);
+        position: relative;
+    }
+
+    .btn-group {
+        position: absolute;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        top: 50%;
+        transform: translateY(-50%);
+        a {
+            cursor: pointer;
+            width: 90px;
+            height: 90px;
+            border-radius: 6px;
+            filter: drop-shadow(-2.509px 6.535px 5px rgba(184, 184, 184, 0.65));
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.highlights {
+    height: 1150px;
+    display: flex;
+    h1 {
+        padding-top: 145px;
+
+        font-size: 48px;
+        line-height: 48px;
+        color: #4e4e4e;
+        font-weight: 700;
+        width: 100%;
+    }
+    .left {
+        padding-left: 12.5vw;
+        width: 62.5%;
+        height: 100%;
+    }
+
+    .right {
+        height: 100%;
+        width: calc(100% - 62.5%);
+        background-color: #4bc7f4;
+    }
+    .main {
+        z-index: 99;
+        position: absolute;
+        width: 75%;
+        margin: 250px auto 0;
+        transform: translateX(-50%);
+        left: 50%;
+        .col-lg-3 {
+            & > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            img{
+                max-height: 100%;
+                max-width: 100%;
+            }
+        }
+        .box {
+            background-color: #fff;
+            height: 359px;
+            padding: 20px;
+            &.has-shadow {
+                box-shadow: 0px 1px 20px #888;
+            }
+            &.img {
+                padding: 0;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            img {
+                object-fit: cover;
+                max-width: 100%;
+                max-height: 100%;
+            }
+            h2 {
+                font-size: 26px;
+                margin-bottom: 20px;
+                line-height: 30px;
+                color: #ffffff;
+                font-weight: 500;
+            }
+            p {
+                font-size: 18px;
+                line-height: 24px;
+                color: #005d83;
+                font-weight: 400;
+            }
+        }
+    }
+}
