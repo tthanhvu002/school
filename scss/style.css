@@ -412,6 +412,10 @@ header nav li {
   padding-top: 100px;
   padding-bottom: 60px;
 }
+.testimonial .swiper2 {
+  overflow: hidden;
+  padding: 10px;
+}
 .testimonial h1 {
   font-size: 48px;
   line-height: 95px;
@@ -459,6 +463,13 @@ header nav li {
   padding-top: 130px;
   padding-bottom: 50px;
 }
+.news .swiper3 {
+  overflow: hidden;
+  height: 500px;
+}
+.news .swiper3 .swiper-button-next, .news .swiper3 .swiper-button-prev {
+  top: 100%;
+}
 .news h1 {
   font-size: 60px;
   line-height: 94px;
@@ -481,6 +492,7 @@ header nav li {
 .news .event .list {
   background-color: #57cbf5;
   padding: 40px 25px;
+  height: 600px;
 }
 .news .event .list .item {
   padding-bottom: 25px;
@@ -831,11 +843,13 @@ footer .contact p img {
     pointer-events: all;
     gap: 3px;
   }
-  .program .swiper .swiper-pagination span {
-    max-width: 270px;
+  .program .swiper .swiper-pagination span.swiper-pagination-bullet {
+    width: 270px;
+    opacity: 1;
     display: inline-block;
     display: flex;
     justify-content: center;
+    border-radius: 0;
     align-items: center;
     height: 80px;
     color: #fff;
@@ -871,6 +885,19 @@ footer .contact p img {
   .program .item {
     display: inline-block;
   }
+  .news .swiper3 {
+    height: fit-content;
+  }
+  .news .swiper3 .swiper-button-next, .news .swiper3 .swiper-button-prev {
+    display: none;
+  }
+  .news .event {
+    margin-top: 140px;
+    flex-direction: row;
+  }
+  .news .event .swiper4 {
+    height: fit-content;
+  }
   footer {
     padding-top: 80px;
     padding-bottom: 100px;
@@ -886,6 +913,10 @@ footer .contact p img {
 @media screen and (max-width: 767.98px) {
   .container {
     padding: 0 4.5vw;
+  }
+  .program .swiper .swiper-pagination span.swiper-pagination-bullet {
+    font-size: 12px;
+    line-height: 20px;
   }
   .btn-group a {
     width: 50px;

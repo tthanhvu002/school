@@ -448,6 +448,10 @@ header {
 .testimonial {
     padding-top: 100px;
     padding-bottom: 60px;
+    .swiper2{
+        overflow: hidden;
+        padding: 10px;
+    }
     h1 {
         font-size: 48px;
         line-height: 95px;
@@ -498,6 +502,14 @@ header {
 .news {
     padding-top: 130px;
     padding-bottom: 50px;
+    .swiper3{
+        overflow: hidden;
+        height: 500px;
+
+        .swiper-button-next, .swiper-button-prev{
+            top: 100%;
+        }
+    }
     h1 {
         font-size: 60px;
         line-height: 94px;
@@ -525,6 +537,7 @@ header {
         .list {
             background-color: #57cbf5;
             padding: 40px 25px;
+            height: 600px;
             .item {
                 &:last-child {
                     border-bottom: 1px solid #fff;
@@ -903,11 +916,13 @@ footer {
                 display: flex;
                 pointer-events: all;
                 gap: 3px;
-                span {
-                    max-width: 270px;
+                span.swiper-pagination-bullet {
+                    width: 270px;
+                    opacity: 1;
                     display: inline-block;
                     display: flex;
                     justify-content: center;
+                    border-radius: 0;
                     align-items: center;
                     height: 80px;
                     color: #fff;
@@ -946,6 +961,23 @@ footer {
             display: inline-block;
         }
     }
+
+    .news{
+        .swiper3{
+            height: fit-content;
+            .swiper-button-next, .swiper-button-prev{
+                display: none;
+            }
+        }
+        .event{
+            margin-top: 140px;
+            flex-direction: row;
+
+            .swiper4{
+                height: fit-content;
+            }
+        }
+    }
     footer {
         padding-top: 80px;
         padding-bottom: 100px;
@@ -964,6 +996,16 @@ footer {
 @media screen and (max-width: 767.98px) {
     .container {
         padding: 0 4.5vw;
+    }
+    .program{
+        .swiper{
+            .swiper-pagination{
+                span.swiper-pagination-bullet{
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
+        }
     }
     .btn-group {
         a {
