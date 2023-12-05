@@ -340,6 +340,7 @@ header nav li {
   flex-direction: column;
   gap: 30px;
   padding: 30px 45px;
+  height: 100%;
 }
 .system .item img {
   -o-object-fit: scale-down;
@@ -384,6 +385,7 @@ header nav li {
 .testimonial .item {
   box-shadow: 0px 1px 10px #888;
   position: relative;
+  height: 100%;
 }
 .testimonial .item img {
   height: 300px;
@@ -414,5 +416,29 @@ header nav li {
   font-size: 14px;
   line-height: 24px;
   color: #ffffff;
+  font-weight: 400;
+}
+
+.news {
+  padding-top: 130px;
+  padding-bottom: 50px;
+}
+.news h1 {
+  font-size: 60px;
+  line-height: 94px;
+  color: #4e4e4e;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.news .item h2 {
+  font-size: 24px;
+  line-height: 29px;
+  color: #57cbf5;
+  font-weight: 700;
+}
+.news .item p {
+  font-size: 18px;
+  line-height: 28px;
+  color: #4e4e4e;
   font-weight: 400;
 }/*# sourceMappingURL=app.css.map */

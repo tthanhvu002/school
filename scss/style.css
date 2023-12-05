@@ -28,26 +28,30 @@ img {
 .wrapper {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .container {
-  padding: 0 9.5%;
+  padding: 0 9.5vw;
   max-width: unset !important;
 }
 
-.contact {
+.contact-wrap {
   padding: 10px;
   color: #fff;
   font-size: 18px;
   background-color: #252525;
 }
-.contact .container {
+.contact-wrap .container {
   gap: 20px;
 }
-.contact .phone-number {
+.contact-wrap .active {
+  color: #4bc7f4;
+}
+.contact-wrap .phone-number {
   gap: 3px;
 }
-.contact .signup-btn {
+.contact-wrap .signup-btn {
   background-color: #005d83;
   color: #fff;
   padding: 5px 20px;
@@ -59,6 +63,9 @@ img {
 header {
   background-color: #fff;
   padding: 25px 0;
+}
+header .nav-mobile {
+  display: none;
 }
 header nav ul {
   gap: 40px;
@@ -81,7 +88,7 @@ header nav li {
 }
 .intro .left {
   padding: 90px 0;
-  padding-left: 12.5vw;
+  padding-left: 9.5vw;
   padding-right: 100px;
   width: 62.5%;
   background-color: #c1d739;
@@ -105,16 +112,25 @@ header nav li {
   height: 100%;
   width: 100%;
 }
-.intro .btn-group {
-  position: absolute;
-  right: 0;
+
+.btn-group {
+  position: fixed;
+  z-index: 99;
+  opacity: 0;
   display: flex;
   flex-direction: column;
   gap: 6px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 35%;
+  visibility: hidden;
+  right: -100px;
+  transition: 0.2s ease;
 }
-.intro .btn-group a {
+.btn-group.active {
+  opacity: 1;
+  right: 0;
+  visibility: visible;
+}
+.btn-group a {
   cursor: pointer;
   width: 90px;
   height: 90px;
@@ -139,7 +155,7 @@ header nav li {
   width: 100%;
 }
 .highlights .left {
-  padding-left: 12.5vw;
+  padding-left: 9.5vw;
   width: 62.5%;
   height: 100%;
 }
@@ -151,7 +167,7 @@ header nav li {
 .highlights .main {
   z-index: 99;
   position: absolute;
-  width: 75%;
+  width: 80.5%;
   margin: 250px auto 0;
   transform: translateX(-50%);
   left: 50%;
@@ -306,37 +322,34 @@ header nav li {
 }
 
 .system {
-  background: url(../img/EW_Top\ view_2023-07-12\ full_1.svg);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/EW_Top view_2023-07-12 full_1.svg");
+  background-size: cover;
+  background-blend-mode: multiply;
   padding-bottom: 160px;
-  min-height: 1200px;
+  padding-top: 130px;
   position: relative;
 }
-.system .layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 0;
-  bottom: 0;
-  background-color: rgba(0, 50, 70, 0.607);
-}
 .system .content {
-  position: absolute;
   z-index: 99;
-  left: 50%;
-  transform: translateX(-50%);
   width: 100%;
   text-align: center;
-  padding: 9.5%;
 }
 .system .list {
   align-items: stretch;
+}
+.system .list li {
+  min-height: 430px;
+}
+.system .list li.img img {
+  height: 100%;
+  object-fit: cover;
 }
 .system .item {
   display: flex;
   flex-direction: column;
   gap: 30px;
   padding: 30px 45px;
+  height: 100%;
 }
 .system .item img {
   object-fit: scale-down;
@@ -380,6 +393,7 @@ header nav li {
 .testimonial .item {
   box-shadow: 0px 1px 10px #888;
   position: relative;
+  height: 100%;
 }
 .testimonial .item img {
   height: 300px;
@@ -411,5 +425,309 @@ header nav li {
   color: #ffffff;
   font-weight: 400;
 }
+
+.news {
+  padding-top: 130px;
+  padding-bottom: 50px;
+}
+.news h1 {
+  font-size: 60px;
+  line-height: 94px;
+  color: #4e4e4e;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.news .item h2 {
+  font-size: 24px;
+  line-height: 29px;
+  color: #57cbf5;
+  font-weight: 700;
+}
+.news .item p {
+  font-size: 18px;
+  line-height: 28px;
+  color: #4e4e4e;
+  font-weight: 400;
+}
+.news .event .list {
+  background-color: #57cbf5;
+  padding: 40px 25px;
+}
+.news .event .list .item {
+  padding-bottom: 25px;
+  padding-top: 25px;
+  border-top: 1px solid #fff;
+}
+.news .event .list .item:last-child {
+  border-bottom: 1px solid #fff;
+}
+.news .event .list .item .date .day {
+  font-size: 69px;
+  color: #ffffff;
+  font-weight: 700;
+  height: fit-content;
+  line-height: 1;
+}
+.news .event .list .item .date p {
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  font-weight: 400;
+}
+.news .event .list .item .content {
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.consult {
+  display: flex;
+}
+.consult .left {
+  padding-top: 85px;
+  padding-left: 9.5vw;
+  width: 40%;
+  background-color: #ebebeb;
+}
+.consult .left .banner {
+  width: 83%;
+  box-shadow: 0px 1px 10px #888;
+}
+.consult .left .banner .content {
+  padding: 5px 25px 40px;
+  background-color: #fff;
+}
+.consult .left .banner img {
+  height: 475px;
+}
+.consult .left .banner h2 {
+  font-size: 24px;
+  line-height: 29px;
+  color: #57cbf5;
+  font-weight: 500;
+}
+.consult .left .banner p {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #4e4e4e;
+  font-weight: 400;
+}
+.consult .right {
+  flex: 1;
+  background-color: #bfd731;
+  padding: 0 80px;
+  padding-top: 85px;
+  padding-bottom: 65px;
+}
+.consult .right h1 {
+  font-size: 48px;
+  line-height: 70px;
+  color: #ffffff;
+  font-weight: 700;
+}
+.consult .right .form {
+  padding: 70px 65px;
+  margin-top: 20px;
+  background-color: #fff;
+  box-shadow: 0px 1px 10px #999;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.consult .right .form input {
+  font-size: 24px;
+  line-height: 34px;
+  color: #2e2e2e;
+  font-weight: 400;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #51bde4;
+}
+.consult .right .form select {
+  font-size: 24px;
+  line-height: 34px;
+  color: #2e2e2e;
+  font-weight: 400;
+  border-radius: 50px;
+  padding: 5px 10px;
+}
+.consult .right .form .btn {
+  font-size: 30px;
+  line-height: 24px;
+  color: #ffffff;
+  font-weight: 500;
+  width: 513px;
+  height: 48px;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  background-color: #57cbf5;
+}
+
+footer {
+  background: url(../img/bg\ footer-02.svg);
+  padding: 50px 0;
+}
+footer .row.mb {
+  display: none;
+}
+footer .social-list {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 50px;
+}
+footer .social-list .item {
+  background-color: #51bde4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  padding: 6px;
+}
+footer .social-list .item svg {
+  width: 30px;
+  height: 30px;
+}
+footer p,
+footer li {
+  font-size: 24px;
+  line-height: 36px;
+  color: #ffffff;
+  font-weight: 400;
+}
+footer .contact {
+  margin-top: 55px;
+  background-color: transparent;
+}
+footer .contact p {
+  font-size: 24px;
+  line-height: 36px;
+  color: #bcd52a;
+  font-weight: 500;
+  display: flex;
+  gap: 7px;
+}
+footer .contact p img {
+  color: #fff;
+}
+
+.end {
+  padding: 30px 0;
+  text-align: center;
+  background-color: #4bc7f4;
+}
+.end p {
+  font-size: 42px;
+  line-height: 52px;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+/* small pc */
+/* tablet */
+@media screen and (max-width: 1023.98px) {
+  .contact-wrap .phone-number {
+    display: none !important;
+  }
+  header nav {
+    display: none;
+  }
+  header .nav-mobile {
+    display: block;
+    position: relative;
+  }
+  header .nav-mobile ul {
+    position: absolute;
+    top: -30px;
+    transition: 0.2s ease;
+    opacity: 0;
+    flex-direction: column;
+    right: 0;
+    align-items: flex-start !important;
+    background-color: #fff;
+    z-index: 99;
+    padding: 15px;
+    width: 150px;
+    gap: 20px;
+    box-shadow: 0px 1px 15px #888;
+  }
+  header .nav-mobile ul.active {
+    top: 30px;
+    opacity: 1;
+  }
+  header .nav-mobile ul li {
+    text-align: left;
+  }
+  .intro {
+    flex-direction: column;
+  }
+  .intro .left {
+    width: 100%;
+  }
+  .intro .left .text {
+    margin-top: 30px;
+  }
+  .intro .right {
+    width: 100%;
+  }
+  .highlights {
+    height: 1690px;
+  }
+  .highlights h1 {
+    padding-top: 100px;
+    width: 100%;
+  }
+  .highlights .left {
+    width: 100%;
+    padding: 0 9.5vw;
+  }
+  .highlights .right {
+    display: none;
+  }
+  .highlights .main {
+    margin-top: 250px;
+  }
+  .system .list {
+    gap: 20px;
+  }
+  .system .list li {
+    min-height: 650px;
+  }
+  .system .list li.img img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .consult {
+    flex-direction: column;
+  }
+  .consult .left {
+    width: 100%;
+    padding: 90px 9.5vw;
+  }
+  .consult .left .banner {
+    margin: 0 auto;
+  }
+  .consult .right {
+    width: 100%;
+  }
+  footer {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+  footer .row {
+    display: none;
+  }
+  footer .row.mb {
+    display: block;
+  }
+}
+/* mobile */
 
 /*# sourceMappingURL=style.css.map */
