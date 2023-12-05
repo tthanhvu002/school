@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+        <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,6 +26,28 @@
   </head>
   <body>
     <div class="wrapper">
+      <div class="menu-mb">
+        <div class="item active">
+          <img src="./img/house.svg" alt="">
+          <p>Trang chủ</p>
+        </div>
+        <div class="item">
+          <img src="./img/thamquan.svg" alt="">
+          <p>Tham quan trường</p>
+        </div>
+        <div class="item">
+          <img src="./img/hotline.svg" alt="">
+          <p>Hotline</p>
+        </div>
+        <div class="item">
+          <img src="./img/tuvan.svg" alt="">
+          <p>Tư vấn</p>
+        </div>
+        <div class="item">
+          <img src="./img/list.svg" alt="">
+          <p>Menu</p>
+        </div>
+      </div>
       <div class="btn-group">
         <a class="top"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
@@ -208,17 +236,61 @@
                 <a href="#" class="arrow-link">
                     <img src="./img/arrow-link.svg" alt="">
                 </a>
+                <!-- Slider main container -->
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  
+                  <div class="swiper-slide">
+                    <a class="item">
+                      <img src="./img/pg1.svg" alt="">
+                      <h2 class="program-name" style="background-color: #ffd100;">Chương trình Mẫu Giáo</h2>
+                      <img src="./img/cambridge.svg" alt="" class="cambridge">
+                     
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="item">
+                      <img src="./img/pg1.svg" alt="">
+                      <h2 class="program-name" style="background-color: #ffd100;">Chương trình Mẫu Giáo</h2>
+                      <img src="./img/cambridge.svg" alt="" class="cambridge">
+                     
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="item">
+                      <img src="./img/pg1.svg" alt="">
+                      <h2 class="program-name" style="background-color: #ffd100;">Chương trình Mẫu Giáo</h2>
+                      <img src="./img/cambridge.svg" alt="" class="cambridge">
+                     
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="item">
+                      <img src="./img/pg1.svg" alt="">
+                      <h2 class="program-name" style="background-color: #ffd100;">Chương trình Mẫu Giáo</h2>
+                      <img src="./img/cambridge.svg" alt="" class="cambridge">
+                     
+                    </a>
+                  </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                
+
+               
+              </div>
+                
                 <ul class="list row gx-2">
                     <li class="col-lg-3">
                         <div class="item">
                             <img src="./img/pg1.svg" alt="">
                             <h2 class="program-name" style="background-color: #ffd100;">Chương trình Mẫu Giáo</h2>
                             <img src="./img/cambridge.svg" alt="" class="cambridge">
-                        </div>
-                    </li>
-                    <li class="col-lg-3">
-                        <div class="item" style="background-color: #c1d739;">
-                            <h2 class="program-name" >Chương trình Tiểu Học</h2>
+                            <div href="#" class="overlay">
+                              <h2 class="program-name" >Chương trình Tiểu Học</h2>
                             <p>Chương trình Bộ GD&ĐT Việt Nam 
                                 Chương trình Tiểu học Quốc tế Cambridge:  Toàn cầu, Tiếng Anh, Toán học, Quan điểm, Công nghệ Thông tin (ICT), Âm nhạc, Hội hoạ, Giáo dục Thể chất,... 
                                 
@@ -226,9 +298,30 @@
                               </p>
                               <p>
                                 Chương trình Thư viện 
-
+  
                               </p>
                               <a href="#" class="link">Tìm hiểu thêm >>></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-lg-3">
+                        <div class="item" >
+                          <img src="./img/pg1.svg" alt="">
+                          <h2 class="program-name" style="background-color: #ffd100;">Chương trình Mẫu Giáo</h2>
+                          <img src="./img/cambridge.svg" alt="" class="cambridge">
+                          <div href="#" class="overlay">
+                            <h2 class="program-name" >Chương trình Tiểu Học</h2>
+                          <p>Chương trình Bộ GD&ĐT Việt Nam 
+                              Chương trình Tiểu học Quốc tế Cambridge:  Toàn cầu, Tiếng Anh, Toán học, Quan điểm, Công nghệ Thông tin (ICT), Âm nhạc, Hội hoạ, Giáo dục Thể chất,... 
+                              
+                              
+                            </p>
+                            <p>
+                              Chương trình Thư viện 
+
+                            </p>
+                            <a href="#" class="link">Tìm hiểu thêm >>></a>
+                          </div>
                         </div>
                     </li>
                     <li class="col-lg-3">
@@ -236,6 +329,19 @@
                             <img src="./img/pg2.svg" alt="">
                             <h2 class="program-name" style="background-color: #57cbf5;">Chương trình THCS</h2>
                             <img src="./img/cambridge.svg" alt="" class="cambridge">
+                            <div href="#" class="overlay">
+                              <h2 class="program-name" >Chương trình Tiểu Học</h2>
+                            <p>Chương trình Bộ GD&ĐT Việt Nam 
+                                Chương trình Tiểu học Quốc tế Cambridge:  Toàn cầu, Tiếng Anh, Toán học, Quan điểm, Công nghệ Thông tin (ICT), Âm nhạc, Hội hoạ, Giáo dục Thể chất,... 
+                                
+                                
+                              </p>
+                              <p>
+                                Chương trình Thư viện 
+  
+                              </p>
+                              <a href="#" class="link">Tìm hiểu thêm >>></a>
+                            </div>
                         </div>
                     </li>
                     <li class="col-lg-3">
@@ -243,6 +349,19 @@
                             <img src="./img/pg3.svg" alt="">
                             <h2 class="program-name" style="background-color: #005d83;">Chương trình THPT</h2>
                             <img src="./img/cambridge.svg" alt="" class="cambridge">
+                            <div href="#" class="overlay">
+                              <h2 class="program-name" >Chương trình Tiểu Học</h2>
+                            <p>Chương trình Bộ GD&ĐT Việt Nam 
+                                Chương trình Tiểu học Quốc tế Cambridge:  Toàn cầu, Tiếng Anh, Toán học, Quan điểm, Công nghệ Thông tin (ICT), Âm nhạc, Hội hoạ, Giáo dục Thể chất,... 
+                                
+                                
+                              </p>
+                              <p>
+                                Chương trình Thư viện 
+  
+                              </p>
+                              <a href="#" class="link">Tìm hiểu thêm >>></a>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -466,7 +585,20 @@
          
         </div>
         <div class="list-logo">
-
+          <div class="item">
+            <img src="./img/cambridge.svg" alt="">
+          </div>
+          <div class="item">
+            <img src="./img/cambridge.svg" alt="">
+          </div> <div class="item">
+            <img src="./img/cambridge.svg" alt="">
+          </div> <div class="item">
+            <img src="./img/cambridge.svg" alt="">
+          </div> <div class="item">
+            <img src="./img/cambridge.svg" alt="">
+          </div> <div class="item">
+            <img src="./img/cambridge.svg" alt="">
+          </div>
         </div>
         <footer>
           <div class="container">
@@ -588,4 +720,30 @@
   </body>
 
   <script src="./js/app.js"></script>
+  <script>
+    let pag1 = ['Chương trình mẫu giáo','Chương trình tiểu học', 'Chương trình THCS', 'Chương trình THPT']
+    const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    slidesPerView: 2,
+    direction: 'horizontal',
+    spaceBetween: 20,
+    loop: true,
+    centeredSlides: true,
+    initialSlide: 2,
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+          return `<span class="pag-${index}"> ${pag1[index]} </span>`;
+        },
+    },
+
+    
+
+   
+  });
+  swiper.slideTo(2, true,true);
+
+  </script>
 </html>
