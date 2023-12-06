@@ -114,7 +114,7 @@ header {
         padding-right: 5%;
         width: 62.5%;
         background-color: #c1d739;
-        .top{
+        .top {
             gap: 50px;
         }
         p {
@@ -159,8 +159,8 @@ header {
     }
     a {
         cursor: pointer;
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
         border-radius: 6px;
         filter: drop-shadow(-2.509px 6.535px 5px rgba(184, 184, 184, 0.65));
         background-color: #ffffff;
@@ -282,7 +282,6 @@ header {
         margin-top: 75px;
         .item {
             position: relative;
-            overflow: hidden;
             cursor: pointer;
             display: block;
             min-height: 380px;
@@ -295,6 +294,7 @@ header {
                 top: 100px;
                 opacity: 0;
                 visibility: hidden;
+                height: fit-content;
                 display: block;
                 background-color: #bcd52a;
                 transition: 0.2s ease;
@@ -309,7 +309,8 @@ header {
                 right: 0;
             }
             img {
-                border-radius: 10px;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
             }
             p {
                 margin: 15px 20px;
@@ -320,9 +321,11 @@ header {
             }
 
             h2 {
+                overflow: hidden;
                 padding: 17px 10px;
                 font-size: 28px;
                 white-space: nowrap;
+                text-overflow: ellipsis;
                 line-height: 51px;
                 color: #ffffff;
                 margin: 0;
@@ -352,6 +355,8 @@ header {
 
     .cambridge {
         margin: 30px auto 0;
+        padding-left: 10px;
+        padding-right: 10px;
         padding-bottom: 40px;
         display: block;
     }
@@ -363,7 +368,7 @@ header {
     background-repeat: no-repeat;
     min-height: 900px;
 
-    .swiper5{
+    .swiper5 {
         margin-top: 70px;
     }
     h1 {
@@ -524,10 +529,16 @@ header {
             line-height: 30px;
             color: #2e2e2e;
             font-weight: 400;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         p {
             margin-top: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
             font-size: 20px;
             line-height: 30px;
             color: #2e2e2e;
@@ -762,10 +773,10 @@ footer {
             display: flex;
             justify-content: center;
             align-items: center;
-            
+
             border-radius: 100%;
             width: 60px;
-    height: 47px;
+            height: 47px;
             padding: 6px;
 
             svg {
@@ -813,36 +824,50 @@ footer {
 
 /* small pc */
 @media screen and (min-width: 1250px) and (max-width: 1600px) {
-    .menu-mb{
+    .btn-group {
+        a {
+            width: 60px;
+            height: 60px;
+        }
+
+    }
+
+    
+    .menu-mb {
         display: none;
     }
 
     .program {
-        .list{
-            .item{
-                padding: 10px;
-                h2{
+        .list {
+            .item {
+                h2 {
                     font-size: 26px;
                     line-height: 34px;
                 }
-                p{
+                p {
                     font-size: 19px;
                     margin-top: 10px;
                 }
             }
-            .link{
+            .link {
                 padding: 10px;
                 font-size: 20px;
             }
         }
     }
-
+    .testimonial{
+        .item{
+            .info{
+                padding: 25px 33px;
+            }
+        }
+    }
     header {
-        .container{
+        .container {
             gap: 30px;
         }
-        .header-logo{
-            img{
+        .header-logo {
+            img {
                 width: 160px;
             }
         }
@@ -850,7 +875,7 @@ footer {
             ul {
                 justify-content: space-between;
                 gap: 20px;
-               
+
                 li {
                     font-size: 20px;
                 }
@@ -1171,7 +1196,7 @@ footer {
     }
     .intro {
         .left {
-            .top{
+            .top {
                 gap: 20px;
                 font-size: 26px;
             }

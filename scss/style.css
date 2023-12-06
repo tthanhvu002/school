@@ -147,8 +147,8 @@ header nav li a {
 }
 .btn-group a {
   cursor: pointer;
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   border-radius: 6px;
   filter: drop-shadow(-2.509px 6.535px 5px rgba(184, 184, 184, 0.65));
   background-color: #ffffff;
@@ -265,7 +265,6 @@ header nav li a {
 }
 .program .list .item {
   position: relative;
-  overflow: hidden;
   cursor: pointer;
   display: block;
   min-height: 380px;
@@ -279,6 +278,7 @@ header nav li a {
   top: 100px;
   opacity: 0;
   visibility: hidden;
+  height: fit-content;
   display: block;
   background-color: #bcd52a;
   transition: 0.2s ease;
@@ -292,7 +292,8 @@ header nav li a {
   right: 0;
 }
 .program .list .item img {
-  border-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 .program .list .item p {
   margin: 15px 20px;
@@ -302,9 +303,11 @@ header nav li a {
   font-weight: 400;
 }
 .program .list .item h2 {
+  overflow: hidden;
   padding: 17px 10px;
   font-size: 28px;
   white-space: nowrap;
+  text-overflow: ellipsis;
   line-height: 51px;
   color: #ffffff;
   margin: 0;
@@ -330,6 +333,8 @@ header nav li a {
 }
 .program .cambridge {
   margin: 30px auto 0;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-bottom: 40px;
   display: block;
 }
@@ -492,9 +497,15 @@ header nav li a {
   line-height: 30px;
   color: #2e2e2e;
   font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .testimonial .item p {
   margin-top: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 20px;
   line-height: 30px;
   color: #2e2e2e;
@@ -755,11 +766,12 @@ footer .contact p img {
 
 /* small pc */
 @media screen and (min-width: 1250px) and (max-width: 1600px) {
+  .btn-group a {
+    width: 60px;
+    height: 60px;
+  }
   .menu-mb {
     display: none;
-  }
-  .program .list .item {
-    padding: 10px;
   }
   .program .list .item h2 {
     font-size: 26px;
@@ -772,6 +784,9 @@ footer .contact p img {
   .program .list .link {
     padding: 10px;
     font-size: 20px;
+  }
+  .testimonial .item .info {
+    padding: 25px 33px;
   }
   header .container {
     gap: 30px;
