@@ -98,7 +98,11 @@ header nav li a {
   width: 62.5%;
   background-color: #c1d739;
 }
+.intro .left .top {
+  gap: 50px;
+}
 .intro .left p {
+  margin-top: 45px;
   font-size: 36px;
   line-height: 46px;
   color: #ffffff;
@@ -1023,12 +1027,16 @@ footer .contact p img {
     line-height: 25px;
     font-size: 18px;
   }
+  .intro .left .top {
+    gap: 20px;
+    font-size: 26px;
+  }
   .intro .left img {
     width: 130px;
   }
   .intro .left p {
     margin-left: 10px;
-    font-size: 30px;
+    font-size: 26px;
   }
   .highlights .main .box {
     height: 385px;

@@ -112,7 +112,11 @@ header {
         padding-right: 100px;
         width: 62.5%;
         background-color: #c1d739;
+        .top{
+            gap: 50px;
+        }
         p {
+            margin-top: 45px;
             font-size: 36px;
             line-height: 46px;
             color: #ffffff;
@@ -1132,12 +1136,16 @@ footer {
     }
     .intro {
         .left {
+            .top{
+                gap: 20px;
+                font-size: 26px;
+            }
             img {
                 width: 130px;
             }
             p {
                 margin-left: 10px;
-                font-size: 30px;
+                font-size: 26px;
             }
         }
     }
