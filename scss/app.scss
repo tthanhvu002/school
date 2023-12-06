@@ -448,9 +448,45 @@ header {
 .testimonial {
     padding-top: 100px;
     padding-bottom: 60px;
-    .swiper2{
+    .swiper2 {
         overflow: hidden;
-        padding: 10px;
+        position: relative;
+        height: 580px;
+        .swiper-slide{
+            height: fit-content;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: 95%;
+            padding: 15px;
+            border-radius: 100%;
+            width: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+
+           
+        }
+        .swiper-button-next{
+            right: 50%;
+            transform: translateX(180%);
+            background-color: #92b50d;
+            color: #fff;
+            &:after{
+                font-size: 15px;
+            }
+        }
+        .swiper-button-prev{
+            color: #fff;
+            background-color: #ccc;
+            left: 50%;
+            transform: translateX(-180%);
+            &:after{
+                font-size: 15px;
+            }
+        }
+
     }
     h1 {
         font-size: 48px;
@@ -502,12 +538,40 @@ header {
 .news {
     padding-top: 130px;
     padding-bottom: 50px;
-    .swiper3{
+    .swiper3 {
         overflow: hidden;
+        position: relative;
         height: 500px;
+        .swiper-slide{
+            height: fit-content;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: 90%;
+            padding: 15px;
+            border-radius: 100%;
+            width: 30px;
+            height: 30px;
 
-        .swiper-button-next, .swiper-button-prev{
-            top: 100%;
+           
+        }
+        .swiper-button-next{
+            right: 50%;
+            transform: translateX(180%);
+            background-color: #92b50d;
+            color: #fff;
+            &:after{
+                font-size: 15px;
+            }
+        }
+        .swiper-button-prev{
+            color: #fff;
+            background-color: #ccc;
+            left: 50%;
+            transform: translateX(-180%);
+            &:after{
+                font-size: 15px;
+            }
         }
     }
     h1 {
@@ -536,14 +600,14 @@ header {
     .event {
         .list {
             background-color: #57cbf5;
-            padding: 40px 25px;
+            padding: 30px 22px;
             height: 600px;
             .item {
                 &:last-child {
                     border-bottom: 1px solid #fff;
                 }
-                padding-bottom: 25px;
-                padding-top: 25px;
+                padding-bottom: 20px;
+                padding-top: 20px;
                 border-top: 1px solid #fff;
                 .date {
                     .day {
@@ -741,6 +805,14 @@ footer {
 
 /* small pc */
 @media screen and (min-width: 1280px) and (max-width: 1900px) {
+    .news {
+        .event {
+            .list {
+                padding: 18px 25px;
+                height: 585px;
+            }
+        }
+    }
 }
 
 /* tablet */
@@ -902,11 +974,11 @@ footer {
     }
     .program {
         display: block;
-
+        padding-bottom: 80px;
         .swiper {
             display: block;
             margin-top: 50px;
-            .swiper-wrapper{
+            .swiper-wrapper {
                 margin-top: 100px;
             }
             .swiper-pagination {
@@ -934,13 +1006,13 @@ footer {
                 .pag-0 {
                     background-color: #a6a1a0;
                 }
-                .pag-1{
+                .pag-1 {
                     background-color: #bfd731;
                 }
-                .pag-2{
+                .pag-2 {
                     background-color: #4bc7f4;
                 }
-                .pag-3{
+                .pag-3 {
                     background-color: #005d83;
                 }
             }
@@ -962,19 +1034,29 @@ footer {
         }
     }
 
-    .news{
-        .swiper3{
+    .news {
+        .swiper3 {
             height: fit-content;
-            .swiper-button-next, .swiper-button-prev{
+            .swiper-button-next,
+            .swiper-button-prev {
                 display: none;
             }
         }
-        .event{
+        .event {
             margin-top: 140px;
             flex-direction: row;
+            margin-left: -9.5vw;
+            margin-right: -9.5vw;
 
-            .swiper4{
+            .swiper4 {
                 height: fit-content;
+            }
+        }
+    }
+    .consult {
+        .left {
+            .banner {
+                width: 100%;
             }
         }
     }
@@ -985,7 +1067,17 @@ footer {
         .row {
             display: none;
             &.mb {
-                display: block;
+                display: flex;
+
+                .col-6 {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 80px;
+                }
+            }
+            .social-list {
+                justify-content: center;
+                padding-bottom: 90px;
             }
         }
     }
@@ -997,10 +1089,10 @@ footer {
     .container {
         padding: 0 4.5vw;
     }
-    .program{
-        .swiper{
-            .swiper-pagination{
-                span.swiper-pagination-bullet{
+    .program {
+        .swiper {
+            .swiper-pagination {
+                span.swiper-pagination-bullet {
                     font-size: 12px;
                     line-height: 20px;
                 }
@@ -1046,9 +1138,85 @@ footer {
         }
     }
     .system {
+        font-size: 50px;
+        h1 {
+            line-height: 50px;
+            font-size: 38px;
+        }
         .item {
             h2 {
                 font-size: 30px;
+            }
+        }
+    }
+    .news {
+        h1 {
+            line-height: 60px;
+            font-size: 50px;
+        }
+        .event {
+            margin-top: 120px;
+            margin-left: -4.5vw;
+            margin-right: -4.5vw;
+        }
+        .item {
+            h2 {
+                font-size: 18px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+    .testimonial {
+        h1 {
+            line-height: 60px;
+            font-size: 38px;
+        }
+    }
+    .destination {
+        h1 {
+            font-size: 38px;
+        }
+    }
+    .program {
+        h1 {
+            font-size: 38px;
+        }
+    }
+    .highlights {
+        h1 {
+            font-size: 38px;
+        }
+    }
+    .consult {
+        .left {
+            .banner {
+                width: 100%;
+            }
+        }
+        .right {
+            padding: 0 20px;
+            h1 {
+                font-size: 35px;
+            }
+        }
+    }
+}
+
+/* small mb */
+@media screen and (max-width: 390.98px) {
+    footer {
+        .row {
+            &.mb {
+                .col-6 {
+                    gap: 30px;
+                    width: 100%;
+                }
+                .contact {
+                    margin-top: 0;
+                }
             }
         }
     }
