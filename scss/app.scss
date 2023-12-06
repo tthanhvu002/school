@@ -77,13 +77,15 @@ header {
     background-color: #fff;
     padding: 25px 0;
     .container {
+        gap: 142px;
     }
     .nav-mobile {
         display: none;
     }
     nav {
+        flex: 1;
         ul {
-            gap: 40px;
+            justify-content: space-between;
         }
         li {
             font-size: 22px;
@@ -107,9 +109,9 @@ header {
 .intro {
     display: flex;
     .left {
-        padding: 90px 0;
+        padding: 70px 0;
         padding-left: 9.5vw;
-        padding-right: 100px;
+        padding-right: 5%;
         width: 62.5%;
         background-color: #c1d739;
         .top{
@@ -280,10 +282,10 @@ header {
         margin-top: 75px;
         .item {
             position: relative;
-
+            overflow: hidden;
             cursor: pointer;
             display: block;
-            min-height: 440px;
+            min-height: 380px;
             position: relative;
             border-radius: 10px;
             filter: drop-shadow(4.769px 7.632px 3px rgba(0, 0, 0, 0.08));
@@ -320,6 +322,7 @@ header {
             h2 {
                 padding: 17px 10px;
                 font-size: 28px;
+                white-space: nowrap;
                 line-height: 51px;
                 color: #ffffff;
                 margin: 0;
@@ -809,14 +812,45 @@ footer {
 }
 
 /* small pc */
-@media screen and (min-width: 1250px) and (max-width: 1900px) {
+@media screen and (min-width: 1250px) and (max-width: 1600px) {
     .menu-mb{
         display: none;
     }
+
+    .program {
+        .list{
+            .item{
+                padding: 10px;
+                h2{
+                    font-size: 26px;
+                    line-height: 34px;
+                }
+                p{
+                    font-size: 19px;
+                    margin-top: 10px;
+                }
+            }
+            .link{
+                padding: 10px;
+                font-size: 20px;
+            }
+        }
+    }
+
     header {
+        .container{
+            gap: 30px;
+        }
+        .header-logo{
+            img{
+                width: 160px;
+            }
+        }
         nav {
             ul {
-                gap: 12px;
+                justify-content: space-between;
+                gap: 20px;
+               
                 li {
                     font-size: 20px;
                 }
