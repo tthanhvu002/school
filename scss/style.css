@@ -701,9 +701,9 @@ footer .social-list .item {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 55px;
-  height: 55px;
   border-radius: 100%;
+  width: 60px;
+  height: 47px;
   padding: 6px;
 }
 footer .social-list .item svg {
