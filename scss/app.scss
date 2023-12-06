@@ -88,7 +88,9 @@ header {
         li {
             font-size: 22px;
             line-height: 27px;
-            color: #005d83;
+            a {
+                color: #005d83;
+            }
         }
     }
 }
@@ -350,7 +352,13 @@ header {
 .destination {
     background: url(../img/earth-bg.svg);
     padding-top: 90px;
+    background-position: center;
+    background-repeat: no-repeat;
     min-height: 900px;
+
+    .swiper5{
+        margin-top: 70px;
+    }
     h1 {
         font-size: 48px;
         line-height: 51px;
@@ -452,7 +460,7 @@ header {
         overflow: hidden;
         position: relative;
         height: 580px;
-        .swiper-slide{
+        .swiper-slide {
             height: fit-content;
         }
         .swiper-button-next,
@@ -465,28 +473,25 @@ header {
             justify-content: center;
             align-items: center;
             height: 30px;
-
-           
         }
-        .swiper-button-next{
+        .swiper-button-next {
             right: 50%;
             transform: translateX(180%);
             background-color: #92b50d;
             color: #fff;
-            &:after{
+            &:after {
                 font-size: 15px;
             }
         }
-        .swiper-button-prev{
+        .swiper-button-prev {
             color: #fff;
             background-color: #ccc;
             left: 50%;
             transform: translateX(-180%);
-            &:after{
+            &:after {
                 font-size: 15px;
             }
         }
-
     }
     h1 {
         font-size: 48px;
@@ -542,7 +547,7 @@ header {
         overflow: hidden;
         position: relative;
         height: 500px;
-        .swiper-slide{
+        .swiper-slide {
             height: fit-content;
         }
         .swiper-button-next,
@@ -552,24 +557,22 @@ header {
             border-radius: 100%;
             width: 30px;
             height: 30px;
-
-           
         }
-        .swiper-button-next{
+        .swiper-button-next {
             right: 50%;
             transform: translateX(180%);
             background-color: #92b50d;
             color: #fff;
-            &:after{
+            &:after {
                 font-size: 15px;
             }
         }
-        .swiper-button-prev{
+        .swiper-button-prev {
             color: #fff;
             background-color: #ccc;
             left: 50%;
             transform: translateX(-180%);
-            &:after{
+            &:after {
                 font-size: 15px;
             }
         }
@@ -602,6 +605,7 @@ header {
             background-color: #57cbf5;
             padding: 25px 22px;
             height: 600px;
+            overflow: hidden;
             .item {
                 &:last-child {
                 }
@@ -800,7 +804,20 @@ footer {
 }
 
 /* small pc */
-@media screen and (min-width: 1280px) and (max-width: 1900px) {
+@media screen and (min-width: 1250px) and (max-width: 1900px) {
+    .menu-mb{
+        display: none;
+    }
+    header {
+        nav {
+            ul {
+                gap: 12px;
+                li {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
     .news {
         .event {
             .list {
@@ -1195,8 +1212,8 @@ footer {
             h1 {
                 font-size: 35px;
             }
-            .form{
-                .btn{
+            .form {
+                .btn {
                     width: fit-content;
                     margin-left: auto;
                     margin-right: auto;
@@ -1207,7 +1224,7 @@ footer {
 }
 
 /* small mb */
-@media screen and (max-width: 390.98px) {
+@media screen and (max-width: 550px) {
     footer {
         .row {
             &.mb {

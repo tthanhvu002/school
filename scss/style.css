@@ -77,6 +77,8 @@ header nav ul {
 header nav li {
   font-size: 22px;
   line-height: 27px;
+}
+header nav li a {
   color: #005d83;
 }
 
@@ -324,7 +326,12 @@ header nav li {
 .destination {
   background: url(../img/earth-bg.svg);
   padding-top: 90px;
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: 900px;
+}
+.destination .swiper5 {
+  margin-top: 70px;
 }
 .destination h1 {
   font-size: 48px;
@@ -553,6 +560,7 @@ header nav li {
   background-color: #57cbf5;
   padding: 25px 22px;
   height: 600px;
+  overflow: hidden;
 }
 .news .event .list .item {
   padding-bottom: 20px;
@@ -735,7 +743,16 @@ footer .contact p img {
 }
 
 /* small pc */
-@media screen and (min-width: 1280px) and (max-width: 1900px) {
+@media screen and (min-width: 1250px) and (max-width: 1900px) {
+  .menu-mb {
+    display: none;
+  }
+  header nav ul {
+    gap: 12px;
+  }
+  header nav ul li {
+    font-size: 20px;
+  }
   .news .event .list {
     padding: 18px 25px;
     height: 585px;
@@ -1072,7 +1089,7 @@ footer .contact p img {
   }
 }
 /* small mb */
-@media screen and (max-width: 390.98px) {
+@media screen and (max-width: 550px) {
   footer .row.mb .col-6 {
     gap: 30px;
     width: 100%;
