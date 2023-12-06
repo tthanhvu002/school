@@ -83,7 +83,6 @@ header nav li a {
 }
 
 .banner img {
-  max-width: 1920px;
   object-fit: cover;
   width: 100%;
   height: 680px;
