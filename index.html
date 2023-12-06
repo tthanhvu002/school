@@ -647,6 +647,28 @@
                         </div>
                       </li>
                     </div>
+                    <div class="swiper-slide">
+                      <li class="item d-flex align-items-center gap-4">
+                        <div class="date">
+                          <div class="day">22</div>
+                          <p>Sep 2023</p>
+                        </div>
+                        <div class="content">
+                          Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur dolor sit 
+                        </div>
+                      </li>
+                    </div>
+                    <div class="swiper-slide">
+                      <li class="item d-flex align-items-center gap-4">
+                        <div class="date">
+                          <div class="day">22</div>
+                          <p>Sep 2023</p>
+                        </div>
+                        <div class="content">
+                          Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur dolor sit 
+                        </div>
+                      </li>
+                    </div>
                   
                   
                 </div>
@@ -690,22 +712,43 @@
           </div>
          
         </div>
-        <div class="list-logo">
-          <div class="item">
-            <img src="./img/cambridge.svg" alt="">
+        <!-- Slider main container -->
+        <div class="swiper6 list-logo">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><div class="item">
+              <img src="./img/cambridge.svg" alt="">
+            </div></div>
+            <div class="swiper-slide"><div class="item">
+              <img src="./img/cambridge.svg" alt="">
+            </div></div>
+            <div class="swiper-slide"><div class="item">
+              <img src="./img/cambridge.svg" alt="">
+            </div></div>
+            <div class="swiper-slide"><div class="item">
+              <img src="./img/cambridge.svg" alt="">
+            </div></div>
+            <div class="swiper-slide"><div class="item">
+              <img src="./img/cambridge.svg" alt="">
+            </div></div>
+            <div class="swiper-slide"><div class="item">
+              <img src="./img/cambridge.svg" alt="">
+            </div></div>
+            <div class="swiper-slide"><div class="item">
+              <img src="./img/cambridge.svg" alt="">
+            </div></div>
+            <div class="swiper-slide"><div class="item">
+              <img src="./img/cambridge.svg" alt="">
+            </div></div>
+            <div class="swiper-slide"><div class="item">
+              <img src="./img/cambridge.svg" alt="">
+            </div></div>
           </div>
-          <div class="item">
-            <img src="./img/cambridge.svg" alt="">
-          </div> <div class="item">
-            <img src="./img/cambridge.svg" alt="">
-          </div> <div class="item">
-            <img src="./img/cambridge.svg" alt="">
-          </div> <div class="item">
-            <img src="./img/cambridge.svg" alt="">
-          </div> <div class="item">
-            <img src="./img/cambridge.svg" alt="">
-          </div>
+         
+
         </div>
+        
         <footer>
           <div class="container">
             <div class="row">
@@ -945,6 +988,8 @@
     1500:{
       direction: 'vertical',
       slidesPerView: 4,
+      centeredSlides: false,
+
     }
   }
     
@@ -965,6 +1010,29 @@
     // when window width is >= 320px
     320:{
         slidesPerView: 5,
+        spaceBetween: 20,
+    },
+    1023: {
+      
+    },
+  }
+    
+
+   
+  });
+  const swiper6 = new Swiper('.swiper6', {
+    // Optional parameters
+    slidesPerView: 5,
+    direction: 'horizontal',
+    spaceBetween: 20,
+    loop: true,
+   /*  autoplay: {
+    delay: 1000,
+    }, */
+    breakpoints: {
+    // when window width is >= 320px
+    320:{
+        slidesPerView: 3,
         spaceBetween: 20,
     },
     1023: {
