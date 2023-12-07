@@ -918,7 +918,7 @@ footer .contact p img {
     width: 100%;
   }
   .highlights {
-    height: 1690px;
+    height: 1890px;
   }
   .highlights h1 {
     padding-top: 100px;
@@ -1191,14 +1191,8 @@ footer .contact p img {
   footer .row.mb .contact {
     margin-top: 0;
   }
-  .highlights {
-    height: fit-content;
-  }
   .highlights .main {
     position: absolute;
-  }
-  .highlights .main .col-lg-3 {
-    width: 100%;
   }
   .highlights .main .box {
     width: 100%;
