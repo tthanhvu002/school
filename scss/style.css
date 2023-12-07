@@ -137,6 +137,7 @@ header nav li a {
   gap: 6px;
   top: 35%;
   visibility: hidden;
+  align-items: flex-end;
   right: -100px;
   transition: 0.2s ease;
 }
@@ -147,14 +148,23 @@ header nav li a {
 }
 .btn-group a {
   cursor: pointer;
-  width: 80px;
-  height: 80px;
+  padding: 30px;
+  gap: 10px;
+  width: fit-content;
   border-radius: 6px;
   filter: drop-shadow(-2.509px 6.535px 5px rgba(184, 184, 184, 0.65));
   background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.btn-group a p {
+  border-left: 1px solid #4bc7f4;
+  padding-left: 10px;
+  font-size: 18px;
+  line-height: 60px;
+  color: #909090;
+  font-weight: 400;
 }
 
 .highlights {
@@ -456,7 +466,7 @@ header nav li a {
 }
 .testimonial .swiper2 .swiper-button-next {
   right: 50%;
-  transform: translateX(180%);
+  transform: translateX(110%);
   background-color: #92b50d;
   color: #fff;
 }
@@ -467,7 +477,7 @@ header nav li a {
   color: #fff;
   background-color: #ccc;
   left: 50%;
-  transform: translateX(-180%);
+  transform: translateX(-110%);
 }
 .testimonial .swiper2 .swiper-button-prev:after {
   font-size: 15px;
@@ -543,7 +553,7 @@ header nav li a {
 }
 .news .swiper3 .swiper-button-next {
   right: 50%;
-  transform: translateX(180%);
+  transform: translateX(110%);
   background-color: #92b50d;
   color: #fff;
 }
@@ -554,7 +564,7 @@ header nav li a {
   color: #fff;
   background-color: #ccc;
   left: 50%;
-  transform: translateX(-180%);
+  transform: translateX(-110%);
 }
 .news .swiper3 .swiper-button-prev:after {
   font-size: 15px;
@@ -767,8 +777,7 @@ footer .contact p img {
 /* small pc */
 @media screen and (min-width: 1250px) and (max-width: 1600px) {
   .btn-group a {
-    width: 60px;
-    height: 60px;
+    padding: 20px;
   }
   .menu-mb {
     display: none;
@@ -847,6 +856,9 @@ footer .contact p img {
   }
   .btn-group {
     top: 15%;
+  }
+  .btn-group a p {
+    display: none;
   }
   .contact-wrap .phone-number {
     display: none !important;

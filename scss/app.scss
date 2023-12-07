@@ -149,6 +149,7 @@ header {
     gap: 6px;
     top: 35%;
     visibility: hidden;
+    align-items: flex-end;
     right: -100px;
     transition: 0.2s ease;
     &.active {
@@ -159,14 +160,23 @@ header {
     }
     a {
         cursor: pointer;
-        width: 80px;
-        height: 80px;
+        padding: 30px;
+        gap: 10px;
+        width: fit-content;
         border-radius: 6px;
         filter: drop-shadow(-2.509px 6.535px 5px rgba(184, 184, 184, 0.65));
         background-color: #ffffff;
         display: flex;
         justify-content: center;
         align-items: center;
+        p {
+            border-left: 1px solid #4bc7f4;
+            padding-left: 10px;
+            font-size: 18px;
+            line-height: 60px;
+            color: #909090;
+            font-weight: 400;
+        }
     }
 }
 
@@ -488,7 +498,7 @@ header {
         }
         .swiper-button-next {
             right: 50%;
-            transform: translateX(180%);
+            transform: translateX(110%);
             background-color: #92b50d;
             color: #fff;
             &:after {
@@ -499,7 +509,7 @@ header {
             color: #fff;
             background-color: #ccc;
             left: 50%;
-            transform: translateX(-180%);
+            transform: translateX(-110%);
             &:after {
                 font-size: 15px;
             }
@@ -578,7 +588,7 @@ header {
         }
         .swiper-button-next {
             right: 50%;
-            transform: translateX(180%);
+            transform: translateX(110%);
             background-color: #92b50d;
             color: #fff;
             &:after {
@@ -589,7 +599,7 @@ header {
             color: #fff;
             background-color: #ccc;
             left: 50%;
-            transform: translateX(-180%);
+            transform: translateX(-110%);
             &:after {
                 font-size: 15px;
             }
@@ -826,13 +836,10 @@ footer {
 @media screen and (min-width: 1250px) and (max-width: 1600px) {
     .btn-group {
         a {
-            width: 60px;
-            height: 60px;
+            padding: 20px;
         }
-
     }
 
-    
     .menu-mb {
         display: none;
     }
@@ -855,9 +862,9 @@ footer {
             }
         }
     }
-    .testimonial{
-        .item{
-            .info{
+    .testimonial {
+        .item {
+            .info {
                 padding: 25px 33px;
             }
         }
@@ -935,6 +942,11 @@ footer {
     }
     .btn-group {
         top: 15%;
+        a{
+            p{
+                display: none;
+            }
+        }
     }
     .contact-wrap {
         .phone-number {
