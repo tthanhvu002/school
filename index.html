@@ -145,9 +145,27 @@
         </div>
       </header>
       <main>
-        <div class="banner">
-          <img src="./img/banner.svg" alt="" />
+        <div class="swiper7 ">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="./img/banner.svg" alt="" />
+
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/banner.svg" alt="" />
+
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/banner.svg" alt="" />
+
+            </div>
+            
+          </div>
+          
         </div>
+        
         <div class="intro">
           <div class="left">
             <div class="top d-flex align-items-center">
@@ -1040,6 +1058,20 @@
     1023: {
       slidesPerView: 5,
     },
+  }
+    
+
+   
+  });const swiper7 = new Swiper('.swiper7', {
+    // Optional parameters
+    slidesPerView: 1,
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+    delay: 1000,
+    },
+    breakpoints: {
+    
   }
     
 

@@ -224,6 +224,7 @@ header nav li a {
 .highlights .main .box img {
   object-fit: cover;
   max-width: 100%;
+  bottom: 0;
   max-height: 100%;
 }
 .highlights .main .box h2 {
@@ -471,6 +472,11 @@ header nav li a {
   color: #fff;
 }
 .testimonial .swiper2 .swiper-button-next:after {
+  position: absolute;
+  right: 50%;
+  transform: translateX(63%);
+}
+.testimonial .swiper2 .swiper-button-next:after {
   font-size: 15px;
 }
 .testimonial .swiper2 .swiper-button-prev {
@@ -478,6 +484,11 @@ header nav li a {
   background-color: #ccc;
   left: 50%;
   transform: translateX(-110%);
+}
+.testimonial .swiper2 .swiper-button-prev:after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-63%);
 }
 .testimonial .swiper2 .swiper-button-prev:after {
   font-size: 15px;
@@ -1151,6 +1162,25 @@ footer .contact p img {
     margin-left: auto;
     margin-right: auto;
   }
+  .highlights .main .box .position-absolute {
+    height: 27% !important;
+  }
+  .highlights .main .box h2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 22px;
+  }
+  .highlights .main .box p {
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 /* small mb */
 @media screen and (max-width: 550px) {
@@ -1160,6 +1190,25 @@ footer .contact p img {
   }
   footer .row.mb .contact {
     margin-top: 0;
+  }
+  .highlights {
+    height: fit-content;
+  }
+  .highlights .main {
+    position: absolute;
+  }
+  .highlights .main .col-lg-3 {
+    width: 100%;
+  }
+  .highlights .main .box {
+    width: 100%;
+  }
+  .menu-mb {
+    height: 120px;
+  }
+  .menu-mb .item p {
+    font-size: 15px;
+    line-height: 22px;
   }
 }
 
